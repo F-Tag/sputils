@@ -6,10 +6,30 @@ authors = ["Fumiali Taguchi <25476669+F-Tag@users.noreply.github.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pybind11 = "^2.9.2"
+numpy = "^1.23.0"
+librosa = "^0.9.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+pysen = {version = "^0.10.2", extras = ["lint"]}
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+
+[tool.pysen]
+version = "0.10"
+
+[tool.pysen.lint]
+enable_black = true
+enable_flake8 = true
+enable_isort = true
+enable_mypy = true
+mypy_preset = "strict"
+line_length = 88
+py_version = "py38"
+[[tool.pysen.lint.mypy_targets]]
+  paths = ["."]
+
