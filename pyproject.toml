@@ -9,10 +9,15 @@ python = "^3.8"
 pybind11 = "^2.9.2"
 numpy = "^1.23.0"
 librosa = "^0.9.1"
+lws = "^1.2.7"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 pysen = {version = "^0.10.2", extras = ["lint"]}
+pysptk = "^0.1.21"
+jupyterlab = "^3.4.3"
+matplotlib = "^3.5.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
