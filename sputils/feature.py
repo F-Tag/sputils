@@ -6,7 +6,7 @@ from lws import lws
 def melspectrogram(
     wave,
     sr,
-    frame_period=5,
+    frame_period=10,
     overlap=4,
     n_mels=40,
     fmin=70,
@@ -35,7 +35,7 @@ def melspectrogram(
 
 
 def mel_to_audio(
-    M, sr, frame_period=5, overlap=4, n_mels=40, fmin=70, fmax=7680, **kwargs
+    M, sr, frame_period=10, overlap=4, n_mels=40, fmin=70, fmax=7680, **kwargs
 ):
     fshift = int(sr * frame_period / 1000)
     fsize = fshift * overlap
